@@ -146,7 +146,7 @@ export default function Login() {
                                     onChange={handleChange}
                                     placeholder="admin@coursemaster.com"
                                     className="input input-bordered w-full focus:input-primary pl-4 pr-4"
-                                    required
+                               
                                 />
                             </div>
                         </div>
@@ -165,7 +165,7 @@ export default function Login() {
                                     onChange={handleChange}
                                     placeholder="••••••••"
                                     className="input input-bordered w-full focus:input-primary pl-4 pr-10"
-                                    required
+                                   
                                 />
                                 <button
                                     type="button"

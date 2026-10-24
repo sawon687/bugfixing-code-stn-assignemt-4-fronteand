@@ -80,7 +80,7 @@ export default function Register() {
                 onChange={handleChange}
                 placeholder="Enter your full name"
                 className="input input-bordered w-full focus:input-primary"
-                required
+               
               />
             </div>
             <div className="form-control">
@@ -94,7 +94,7 @@ export default function Register() {
                 onChange={handleChange}
                 placeholder="Enter your email"
                 className="input input-bordered w-full focus:input-primary"
-                required
+              
               />
             </div>
             <div className="form-control">
@@ -108,7 +108,7 @@ export default function Register() {
                 onChange={handleChange}
                 placeholder="Create a password"
                 className="input input-bordered w-full focus:input-primary"
-                required
+                
               />
             </div>
 
