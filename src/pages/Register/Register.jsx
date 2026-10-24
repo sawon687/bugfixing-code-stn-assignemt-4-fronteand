@@ -29,7 +29,8 @@ export default function Register() {
                 payload.adminKey = form.adminKey.trim();
             }
 
-            await registerUser(payload);
+          const res=  await registerUser(payload);
+          console.log('response',res)
 
             navigate("/login");
         } catch (err) {

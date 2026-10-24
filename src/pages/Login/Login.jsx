@@ -21,16 +21,19 @@ export default function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
         try {
             setLoading(true);
             setError(null);
 
             const res = await loginUser(form);
+            console.log('response ',res.data)
             saveToken(res.data.token);
 
             navigate("/");
             window.location.reload();
         } catch (err) {
+            console.log('error',err)
             setError(err.response?.data?.message || "Login failed. Please check your credentials.");
         } finally {
             setLoading(false);
