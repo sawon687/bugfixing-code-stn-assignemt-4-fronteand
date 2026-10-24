@@ -33,8 +33,10 @@ export default function Login() {
             navigate("/");
             window.location.reload();
         } catch (err) {
-            console.log('error',err)
-            setError(err.response?.data?.message || "Login failed. Please check your credentials.");
+           const erros=err.response?.data
+            
+      const message =erros.message|| erros.errors[0].message || "Login failed. Please check your credentials.";
+            setError(message );
         } finally {
             setLoading(false);
         }
