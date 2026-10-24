@@ -14,10 +14,13 @@ export default function CourseDetails() {
     const dispatch = useDispatch();
 
     const { currentCourse, detailLoading, error: courseError } = useSelector((state) => state.courses);
-    const { enrolling, error: enrollError, success, enrollments: myEnrollments } = useSelector((state) => state.enrollment);
+    const { enrolling, error: enrollError, success, enrollments: myEnrollments } = useSelector((state) => state.enrollment
+    );
+
+    console.log('enrolement',enrolling)
     const { user, token, isAuthenticated } = useSelector((state) => state.auth);
     const [selectedBatchId, setSelectedBatchId] = useState(null);
-
+        console.log('enrollError',enrollError)
     useEffect(() => {
         dispatch(fetchCourseById(id));
         return () => dispatch(clearCurrentCourse());

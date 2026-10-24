@@ -8,10 +8,13 @@ import { getCourseById } from "../../services/courses.api";
 
 export default function StudentDashboard() {
   const dispatch = useDispatch();
-  const { enrollments, loading, error } = useSelector(
-    (state) => state.enrollment,
-  );
-  const { currentCourse } = useSelector((state) => state.courses);
+  const { enrollments, loading, error } = useSelector((state) => {
+    return state.enrollment;
+  });
+  console.log("enrollmens", enrollments);
+  const { currentCourse } = useSelector((state) => {
+    return state.courses;
+  });
 
   const [expandedCourse, setExpandedCourse] = useState(null);
   const [courseStats, setCourseStats] = useState({}); // { courseId: { quizStats, assignmentStats, courseData, lessonMap } }
